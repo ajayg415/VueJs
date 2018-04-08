@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Vue 2 way data binding</title>
+</head>
+<body>
+	<div id='root'>
+		<input type="text" v-model='message'/>
+		<br/>
+		<span>{{message}}</span>
+	</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.4.0/vue.js"></script>
+	<script>
+		var myVue = new Vue({
+			el: '#root',
+			data: {
+				message: 'Ajay Gangisetti'
+			}
+		});
+	</script>
+</body>
+</html>

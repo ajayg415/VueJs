@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Vuejs Hello World</title>
+</head>
+<body>
+	<div id='root'>{{message}}</div>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.4.0/vue.js"></script>
+	<script>
+		var myVue = new Vue({
+			el : '#root',
+			data: {
+				message : 'Hello World'
+			}
+		});
+	</script>
+</body>
+</html>

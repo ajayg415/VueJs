@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>VueJs Global Component</title>
+</head>
+
+<body>
+  <div id='root'>
+    <localComponent></localComponent>
+  </div>
+  <span>Note: Always declare components at the top of script and component name should contain only small letters</span>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.4.0/vue.js"></script>
+  <script>
+  Vue.component('localcomponent', {
+    template: '<h1>Content from Global Component</h1>'
+  });
+  var myVue = new Vue({
+    el: '#root'
+  });
+  </script>
+</body>
+
+</html>

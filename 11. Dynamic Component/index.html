@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dynamic Component using v-bind:is</title>
+</head>
+<body>
+	<div id='root'>
+		<div>
+			<select v-on:change='viewChange'>
+				<option value="component1">component 1</option>
+				<option value="component2">component 2</option>
+			</select>
+		</div>
+		<component :is='view'></component>
+	</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.4.0/vue.js"></script>
+	<script src="app.js"></script>
+</body>
+</html>

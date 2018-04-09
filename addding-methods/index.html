@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Adding methods to Vue Instance</title>
+</head>
+<body>
+		<div id='root'>
+			<h1>First Name : {{firstName}}</h1>
+			<h1>Last Name  : {{lastName}}</h1>
+			<h2>{{getFullName()}}</h2>
+		</div>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.4.0/vue.js"></script>
+		<script>
+			var myVue = new Vue({
+				el : '#root',
+				data : {
+					'firstName': 'Ajay',
+					'lastName': 'Gangisetti',
+					'city': 'Hyderabad'
+				},
+				methods: {
+					'getFullName': function(){
+						return "I'm "+ this.firstName+" " +this.lastName+ " from "+ this.city
+					}
+				}
+			});
+		</script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Vue Getter Setter using computed method</title>
+</head>
+<body>
+	<div id='root'>
+		<h1>A value: {{a}}</h1>
+		Note: Use Javascript console to update A value using "myVue.updateA = 4" 
+	</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.4.0/vue.js"></script>
+	<script>
+		var myVue = new Vue({
+			el: '#root',
+			data: {
+				a: 2
+			},
+			computed: {
+				getA : function(){
+					return this.a;
+				},
+				updateA: {
+					get: function() {
+						return this.a;
+					},
+					set: function(x) {
+						this.a = x;
+					}
+				}
+			}
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Attaching events in VueJs</title>
+</head>
+<body>
+	<div id='root'>
+		<input type="button" value="Increase Counter" v-on:click="incCount()"/>  <span> {{counter}}</span>
+	</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.4.0/vue.js"></script>
+	<script>
+		var myVue = new Vue({
+			el : '#root',
+			data: {
+				'counter': 0
+			},
+			methods: {
+				incCount : function(){
+					this.counter ++;
+				}
+			}
+		});
+	</script>
+</body>
+</html>

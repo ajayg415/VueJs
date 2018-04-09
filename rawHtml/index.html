@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Adding HTMl from Vue</title>
+</head>
+<body>
+	<div id='root'>
+		<span v-html='header'></span>
+		<span>{{header}}</span>
+	</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.4.0/vue.js"></script>
+	<script>
+		var myVue = new Vue({
+			el: '#root',
+			data: {
+				'header': '<h1>This is just a example content to demonstrate innerHTML example in vueJS </h1>'
+			}
+		});
+	</script>
+</body>
+</html>

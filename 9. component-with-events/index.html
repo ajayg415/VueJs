@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>VueJs component with javascrript events</title>
+</head>
+
+<body>
+  <div id='root'>
+    <mycomponent></mycomponent>
+    <mycomponent></mycomponent>
+  </div>
+  <span>Note: On mouseover, we see the content of the first component is changed to Ben, however, the second one remains as it is. This is because the data component is a function and it returns an object. Thus, when it is changed in one place, the same is not overwritten in other cases.</span>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.4.0/vue.js"></script>
+  <script src="app.js"></script>
+  <script>
+	  var myVue = new Vue({
+	    el: '#root'
+	  })
+  </script>
+</body>
+
+</html>
